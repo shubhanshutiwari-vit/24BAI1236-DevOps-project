@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact · Bihar State Tourism</title>
+<meta name="description" content="Contact the Bihar Department of Tourism for enquiries and support.">
+<link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="index.html">
+      <svg class="mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M16 4 C10 4, 6 10, 6 16 C6 22, 10 27, 16 27 C22 27, 26 22, 26 16 C26 10, 22 4, 16 4Z" stroke="#C1622D" stroke-width="2" fill="none"/>
+        <path d="M4 27h24" stroke="#0B4F4A" stroke-width="2.4"/>
+        <circle cx="16" cy="16" r="2.6" fill="#C9A227"/>
+      </svg>
+      Bihar Tourism
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="attractions.html">Attractions</a></li>
+      <li><a href="hotels.html">Hotels</a></li>
+      <li><a href="guides.html">Travel Guides</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="maps.html">Maps</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a class="btn btn-outline" href="booking.html">Book Now</a>
+    </div>
+  </nav>
+</header>
+<div class="status-strip">
+  <div class="container">
+    <span><span class="status-dot" aria-hidden="true"></span>All booking &amp; information services operational </span>
+    <span>Local time <span data-status-time>--:--</span> IST</span>
+  </div>
+</div>
+<main id="main">
+
+<section class="hero" style="padding:64px 0 40px;">
+  <div class="container">
+    <p class="eyebrow">Reach us</p>
+    <h1 style="font-size:clamp(2rem,3.6vw,2.8rem);">Contact the department</h1>
+    <p class="lead">Questions about routes, permits or accessibility? Our facilitation centres can help.</p>
+  </div>
+</section>
+<section>
+  <div class="container" style="display:grid; grid-template-columns:1.3fr 1fr; gap:32px; align-items:start;">
+    <form class="form-card" data-validate data-success-message="Message sent — our team replies within one business day.">
+      <h3>Send a message</h3>
+      <div class="form-grid">
+        <div class="field">
+          <label for="c-name">Full name</label>
+          <input type="text" id="c-name" name="name" required>
+          <span class="err-msg">Please enter your name.</span>
+        </div>
+        <div class="field">
+          <label for="c-email">Email</label>
+          <input type="email" id="c-email" name="email" required>
+          <span class="err-msg">Please enter a valid email.</span>
+        </div>
+        <div class="field full">
+          <label for="c-subject">Subject</label>
+          <select id="c-subject" name="subject">
+            <option>General enquiry</option>
+            <option>Booking support</option>
+            <option>Accessibility request</option>
+            <option>Media &amp; press</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label for="c-message">Message</label>
+          <textarea id="c-message" name="message" rows="5" required></textarea>
+          <span class="err-msg">Please enter a message.</span>
+        </div>
+      </div>
+      <button class="btn btn-primary" type="submit" style="margin-top:20px;">Send message</button>
+    </form>
+    <div>
+      <div class="card" style="margin-bottom:20px;">
+        <div class="body">
+          <span class="tag">Facilitation Centre</span>
+          <h3>Patna Office</h3>
+          <p class="small">Beer Chand Patel Marg, Patna, Bihar 800001<br>Open daily, 9 AM – 7 PM</p>
+          <p class="small">+91 12345 67890 · info@bihartourism.gov.in</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="thumb ph"><span><img src="/project/src/main/resources/static/images/download.webp"></span></div>
+        <div class="body"><p class="small">Walk-ins welcome for maps, permits and last-minute bookings.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Bihar State Tourism</h4>
+        <p class="small" style="color:rgba(245,239,224,0.72); max-width:32ch;">The official department portal for attractions, stays, guides and bookings across Bihar — the land of Nalanda, Bodh Gaya and the Ganga.</p>
+        <form data-newsletter style="display:flex; gap:8px; margin-top:16px;">
+          <label for="nl-email" class="visually-hidden" style="position:absolute; left:-9999px;">Email address</label>
+          <input id="nl-email" type="email" placeholder="you@example.com" required
+            style="flex:1; padding:10px 12px; border-radius:6px; border:1px solid rgba(245,239,224,0.25); background:rgba(245,239,224,0.06); color:#F5EFE0;">
+          <button class="btn btn-primary" type="submit" style="padding:10px 16px;">Join</button>
+        </form>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="attractions.html">Attractions</a>
+        <a href="hotels.html">Hotels &amp; Stays</a>
+        <a href="guides.html">Travel Guides</a>
+        <a href="gallery.html">Gallery</a>
+      </div>
+      <div>
+        <h4>Plan</h4>
+        <a href="maps.html">Maps &amp; Routes</a>
+        <a href="booking.html">Book a Package</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="about.html">About the Department</a>
+      </div>
+      <div>
+        <h4>Department</h4>
+        <a href="tel:+911234567890">+91 12345 67890</a>
+        <a href="mailto:info@bihartourism.gov.in">info@bihartourism.gov.in</a>
+        <a href="#">Tourist Facilitation Centre, Patna</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Department of Tourism, Government of Bihar. All rights reserved.</span>
+      <span>Built &amp; monitored for high-availability during holiday seasons.</span>
+    </div>
+  </div>
+</footer>
+<button class="to-top" aria-label="Back to top">↑</button>
+<script src="../static/js/script.js"></script>
+</body>
+</html>

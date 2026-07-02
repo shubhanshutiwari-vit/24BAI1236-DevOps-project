@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Booking · Bihar State Tourism</title>
+<meta name="description" content="Book hotel and experience packages across Bihar with live price estimates.">
+<link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="index.html">
+      <svg class="mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M16 4 C10 4, 6 10, 6 16 C6 22, 10 27, 16 27 C22 27, 26 22, 26 16 C26 10, 22 4, 16 4Z" stroke="#C1622D" stroke-width="2" fill="none"/>
+        <path d="M4 27h24" stroke="#0B4F4A" stroke-width="2.4"/>
+        <circle cx="16" cy="16" r="2.6" fill="#C9A227"/>
+      </svg>
+      Bihar Tourism
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="attractions.html">Attractions</a></li>
+      <li><a href="hotels.html">Hotels</a></li>
+      <li><a href="guides.html">Travel Guides</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="maps.html">Maps</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a class="btn btn-outline" href="booking.html">Book Now</a>
+    </div>
+  </nav>
+</header>
+<div class="status-strip">
+  <div class="container">
+    <span><span class="status-dot" aria-hidden="true"></span>All booking &amp; information services operational · 99.98% uptime</span>
+    <span>Local time <span data-status-time>--:--</span> IST</span>
+  </div>
+</div>
+<main id="main">
+
+<section class="hero" style="padding:64px 0 40px;">
+  <div class="container">
+    <p class="eyebrow">Reserve</p>
+    <h1 style="font-size:clamp(2rem,3.6vw,2.8rem);">Book a package</h1>
+    <p class="lead">Reserve a stay-and-experience package. Totals update instantly as you adjust your trip.</p>
+  </div>
+</section>
+<section>
+  <div class="container" style="display:grid; grid-template-columns:1.5fr 1fr; gap:32px; align-items:start;">
+    <form class="form-card" id="booking-form" data-validate data-success-message="Booking request received — a confirmation will follow by email.">
+      <h3>Trip details</h3>
+      <div class="form-grid">
+        <div class="field full">
+          <label for="package">Package</label>
+          <select id="package" name="package">
+            <option data-rate="7200" selected>Magadha Grand River Escape — ₹7,200/night</option>
+            <option data-rate="3800">Nalanda Residency Heritage Stay — ₹3,800/night</option>
+            <option data-rate="4600">Rajgir Springs Wellness Package — ₹4,600/night</option>
+            <option data-rate="1400">Bodh Gaya Pilgrim Lodge — ₹1,400/night</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="checkin">Check-in date</label>
+          <input type="date" id="checkin" name="checkin" required>
+          <span class="err-msg">Please choose a check-in date.</span>
+        </div>
+        <div class="field">
+          <label for="nights">Nights</label>
+          <input type="number" id="nights" name="nights" min="1" max="21" value="2" required>
+        </div>
+        <div class="field">
+          <label for="guests">Guests</label>
+          <input type="number" id="guests" name="guests" min="1" max="10" value="2" required>
+        </div>
+        <div class="field">
+          <label for="room">Room type</label>
+          <select id="room" name="room">
+            <option>Standard</option>
+            <option>River-facing</option>
+            <option>Suite</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" required>
+          <span class="err-msg">Please enter your name.</span>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+          <span class="err-msg">Please enter a valid email.</span>
+        </div>
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" required>
+          <span class="err-msg">Please enter a valid phone number.</span>
+        </div>
+        <div class="field full">
+          <label for="notes">Special requests <span class="hint">(optional)</span></label>
+          <textarea id="notes" name="notes" rows="3"></textarea>
+        </div>
+      </div>
+      <button class="btn btn-primary btn-block" type="submit" style="margin-top:20px;">Confirm booking request</button>
+      <p class="small" style="margin-top:12px;">You will not be charged yet — our team confirms availability within 24 hours, backed by real-time inventory monitoring.</p>
+    </form>
+
+    <aside class="summary-card" data-booking-summary>
+      <h3>Booking summary</h3>
+      <div class="summary-row"><span>Package</span><span data-sum-package>—</span></div>
+      <div class="summary-row"><span>Subtotal</span><span data-sum-subtotal>₹0</span></div>
+      <div class="summary-row"><span>Taxes &amp; fees (12%)</span><span data-sum-taxes>₹0</span></div>
+      <div class="summary-row total"><span>Estimated total</span><span data-sum-total>₹0</span></div>
+      <p class="small" style="color:rgba(245,239,224,0.7); margin-top:14px;">Final price is confirmed at checkout based on live availability.</p>
+    </aside>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Bihar State Tourism</h4>
+        <p class="small" style="color:rgba(245,239,224,0.72); max-width:32ch;">The official department portal for attractions, stays, guides and bookings across Bihar — the land of Nalanda, Bodh Gaya and the Ganga.</p>
+        <form data-newsletter style="display:flex; gap:8px; margin-top:16px;">
+          <label for="nl-email" class="visually-hidden" style="position:absolute; left:-9999px;">Email address</label>
+          <input id="nl-email" type="email" placeholder="you@example.com" required
+            style="flex:1; padding:10px 12px; border-radius:6px; border:1px solid rgba(245,239,224,0.25); background:rgba(245,239,224,0.06); color:#F5EFE0;">
+          <button class="btn btn-primary" type="submit" style="padding:10px 16px;">Join</button>
+        </form>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="attractions.html">Attractions</a>
+        <a href="hotels.html">Hotels &amp; Stays</a>
+        <a href="guides.html">Travel Guides</a>
+        <a href="gallery.html">Gallery</a>
+      </div>
+      <div>
+        <h4>Plan</h4>
+        <a href="maps.html">Maps &amp; Routes</a>
+        <a href="booking.html">Book a Package</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="about.html">About the Department</a>
+      </div>
+      <div>
+        <h4>Department</h4>
+        <a href="tel:+911234567890">+91 12345 67890</a>
+        <a href="mailto:info@bihartourism.gov.in">info@bihartourism.gov.in</a>
+        <a href="#">Tourist Facilitation Centre, Patna</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Department of Tourism, Government of Bihar. All rights reserved.</span>
+      <span>Built &amp; monitored for high-availability during holiday seasons.</span>
+    </div>
+  </div>
+</footer>
+<button class="to-top" aria-label="Back to top">↑</button>
+<script src="../static/js/script.js"></script>
+</body>
+</html>
